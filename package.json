@@ -1,0 +1,24 @@
+{
+  "name": "full-stack",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "nodejs"
+  ],
+  "homepage": "https://github.com/rohitkumar7307195/FullstackbackendCSE-25#readme",
+  "bugs": {
+    "url": "https://github.com/rohitkumar7307195/FullstackbackendCSE-25/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitkumar7307195/FullstackbackendCSE-25.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "Full Stack Node.js Project",
+    "start": "node server.js"
+  }
+}
