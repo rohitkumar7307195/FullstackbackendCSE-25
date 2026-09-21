@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import express from "express";
 import fs from "fs";
 import cors from "cors";
@@ -57,3 +58,18 @@ app.listen(5000, () => {
   console.log("Server running on http://localhost:5000");
 });
 // paste this code in index.js
+=======
+
+import express from "express";
+
+const app = express();
+
+const PORT = 3000;
+
+// public folder ko serve karega
+app.use(express.static("public"));
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`);
+});
+>>>>>>> ccff9a8c45b02c401585eebb51e41333b58353e8
