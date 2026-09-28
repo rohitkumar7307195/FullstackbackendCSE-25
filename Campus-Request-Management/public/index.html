@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CampusCare | Campus Request Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    C
+                </div>
+
+                <div>
+                    <h2>CampusCare</h2>
+                    <span>Student Support</span>
+                </div>
+
+            </div>
+
+            <div class="nav-right">
+
+                <span class="nav-status">
+                    <span class="status-dot"></span>
+                    Campus Support
+                </span>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN
+    ================================= -->
+
+    <main class="main-container">
+
+
+        <!-- ================================
+             HERO SECTION
+        ================================= -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    🎓 Student Support Portal
+                </span>
+
+                <h1>
+                    Make Your Campus
+                    <span>Better.</span>
+                </h1>
+
+                <p>
+                    Report campus problems, submit requests,
+                    and track your concerns — all in one place.
+                </p>
+
+                <div class="hero-features">
+
+                    <div class="feature">
+                        <span>✓</span>
+                        Easy to submit
+                    </div>
+
+                    <div class="feature">
+                        <span>✓</span>
+                        Track requests
+                    </div>
+
+                    <div class="feature">
+                        <span>✓</span>
+                        Quick management
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-icon">
+                    📋
+                </div>
+
+                <h3>
+                    Have a campus issue?
+                </h3>
+
+                <p>
+                    Tell us what happened and we'll
+                    help you get it addressed.
+                </p>
+
+                <a href="#request-form" class="hero-button">
+                    Submit a Request
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             STATS
+        ================================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    📋
+                </div>
+
+                <div>
+                    <span>Total Requests</span>
+                    <strong id="totalRequests">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    ⏳
+                </div>
+
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingRequests">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Support Status</span>
+                    <strong>Active</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             FORM + REQUESTS
+        ================================= -->
+
+        <div class="content-grid">
+
+
+            <!-- ============================
+                 REQUEST FORM
+            ============================= -->
+
+            <section class="form-card" id="request-form">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            NEW REQUEST
+                        </span>
+
+                        <h2 id="formTitle">
+                            Submit a Request
+                        </h2>
+
+                        <p>
+                            Provide the details of your campus issue.
+                        </p>
+
+                    </div>
+
+                    <div class="form-icon">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <form id="requestForm">
+
+
+                    <!-- Student Name -->
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Name
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Category -->
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Request Category
+                            <span>*</span>
+                        </label>
+
+                        <select id="category" required>
+
+                            <option value="">
+                                Select a category
+                            </option>
+
+                            <option value="Academic">
+                                Academic
+                            </option>
+
+                            <option value="Hostel">
+                                Hostel
+                            </option>
+
+                            <option value="Library">
+                                Library
+                            </option>
+
+                            <option value="Canteen">
+                                Canteen
+                            </option>
+
+                            <option value="Transport">
+                                Transport
+                            </option>
+
+                            <option value="Infrastructure">
+                                Infrastructure
+                            </option>
+
+                            <option value="IT Support">
+                                IT Support
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Problem Description
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="5"
+                            placeholder="Describe your problem clearly..."
+                            required
+                        ></textarea>
+
+                        <small>
+                            Please provide enough detail to help us understand the issue.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Priority -->
+
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Priority Level
+                            <span>*</span>
+                        </label>
+
+                        <select id="priority" required>
+
+                            <option value="">
+                                Select priority
+                            </option>
+
+                            <option value="Low">
+                                Low — General request
+                            </option>
+
+                            <option value="Medium">
+                                Medium — Needs attention
+                            </option>
+
+                            <option value="High">
+                                High — Urgent issue
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            id="submitButton"
+                            class="primary-button"
+                        >
+                            <span>Submit Request</span>
+                            <span>→</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelButton"
+                            class="secondary-button"
+                            style="display: none;"
+                        >
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- ============================
+                 REQUESTS
+            ============================= -->
+
+            <section class="requests-card">
+
+                <div class="requests-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            YOUR REQUESTS
+                        </span>
+
+                        <h2>
+                            Submitted Requests
+                        </h2>
+
+                    </div>
+
+                    <div
+                        class="request-count"
+                        id="requestCount"
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="requestsList"
+                    class="requests-list"
+                >
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            📭
+                        </div>
+
+                        <h3>
+                            No requests yet
+                        </h3>
+
+                        <p>
+                            Your submitted campus requests
+                            will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <strong>CampusCare</strong>
+                <span>
+                    Making campus support simpler.
+                </span>
+            </div>
+
+            <p>
+                © 2026 CampusCare · Student Support Portal
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
